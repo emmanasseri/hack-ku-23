@@ -1,9 +1,16 @@
 
 // AddPage.js
 import React from 'react';
+import MintNFT from './MintNFT';
+
 
 const AddPage = () => {
-  return <div>Add Page</div>;
+  return (
+    <>
+    <MintNFT />;
+  <div>Add Page</div>;
+  </>
+  )
 };
 
 export default AddPage;
