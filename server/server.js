@@ -83,6 +83,8 @@ const storage = multer.diskStorage({
       res.status(400).json({ success: false, message: 'Failed to mint NFT.' });
     }
   } catch (error) {
-    res.status(500).json({ success: false, message: 'Error minting NFT.', error });
+    console.error('Error in server:', error);
+    res.status(500).json({ success: false, message: 'Error minting NFT.', error: error.message });
+
   }
 });
